@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { 'Jason' => 'iJason92@yahoo.com' }
   s.platform     = :ios, '8.0'
-  s.source       = { :git => 'ishepherdme@wangdl.synology.me:/var/services/homes/ishepherdme/git/components/JAScanner.git', :tag => "#{s.version}" }
+  s.source       = { :git => 'ishepherdme@wangdl.synology.me:/var/services/homes/ishepherdme/git/components/feature/JAScanner.git', :tag => "#{s.version}" }
   s.source_files = 'JAScanner/**/**.{h,m}'  
   s.public_header_files = 'JAScanner/**/*.h'
   s.frameworks   = 'Foundation','UIKit', 'QuartzCore'
