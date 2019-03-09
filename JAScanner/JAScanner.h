@@ -1,0 +1,75 @@
+//
+//  JAScanner.h
+//  AFNetworking
+//
+//  Created by Shepherd on 2019/3/5.
+//
+
+#import <Foundation/Foundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+CGFloat visibleHeight = 200;
+CGFloat visibleWidth = 200;
+
+typedef NS_ENUM(NSInteger,JAScannerState) {
+    JAScannerStateNone,
+    JAScannerStateScanning,
+    JAScannerStateCompleted,
+    JAScannerStateLeaveScene,
+};
+
+typedef NS_ENUM(NSInteger,JAScannerOption) {
+    JAScannerOptionQR = 1 << 0
+};
+
+@interface JAScanner : NSObject
+
+@property (nonatomic,strong) UIImage *areaImage;
+@property (nonatomic,strong) UIImage *scanningImage;
+@property (nonatomic,copy) void (^animateBlock)(void);
+
+/** flashlight status */
+@property (nonatomic,assign,getter=isBulb) BOOL bulb;
+@property (nonatomic,assign,getter=isHideBulb) BOOL hideBulb;
+
+/** Default is qr */
+@property (nonatomic,assign) JAScannerOption option;
+/** Default is none */
+@property (nonatomic,assign) JAScannerState state;
+
+/**
+ Create a scanner object
+ 
+ Default size is {200,200} and centered
+ 
+ @param view Camera occupy view
+ @return scanner object
+ */
++ (instancetype)scanAtView:(UIView *)view;
+
+/**
+ Create a scanner object
+ 
+ @param view Camera occupy view
+ @param frame Scan active area
+ @return scanner object
+ */
++ (instancetype)scanAtView:(UIView *)view
+               visibleArea:(CGRect)frame;
+
+/**
+ Start recognize with handler
+
+ @param completionHandler An handler which recognize action completed
+ */
+- (void)startWithCompletionHandler:(void (^)(NSString *result))completionHandler;
+
+/**
+ Stop recognize
+ */
+- (void)stopRecognize;
+
+@end
+
+NS_ASSUME_NONNULL_END

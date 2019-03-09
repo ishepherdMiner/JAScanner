@@ -1,0 +1,22 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'ishepherdme@wangdl.synology.me:/var/services/homes/ishepherdme/git/components/shepherd.git'
+
+platform :ios, '9.0'
+
+target 'JAScannerRunner' do  
+  use_frameworks!
+
+  # pod 'JAScanner', :podspec =>'../JAScanner.podspec'
+  pod 'JAScanner', :path => '../'
+
+  target 'JAScannerRunnerTests' do
+    inherit! :search_paths
+    
+  end
+
+  target 'JAScannerRunnerUITests' do
+    inherit! :search_paths
+    
+  end
+
+end
