@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'JAScanner'
-  s.version      = '0.0.1.1'
+  s.version      = '0.0.1'
   s.summary      = '特性:扫描'
   s.description  = <<-DESC
   特性:扫描功能,支持QR
