@@ -109,7 +109,7 @@ CGFloat animationDuration = 1.33;
     }else {
         if ([UIView areAnimationsEnabled]) {
             self.containView.scanningImageView.bottom = self.visibleArea.origin.y;
-            [UIView animateWithDuration:animateWithDuration animations:^{
+            [UIView animateWithDuration:animationDuration animations:^{
                 [UIView setAnimationRepeatCount:MAXFLOAT];
                 self.containView.scanningImageView.bottom = self.visibleArea.origin.y + self.visibleArea.size.height;
                 self.containView.scanningImageView.alpha = 0.0;
