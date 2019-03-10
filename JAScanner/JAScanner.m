@@ -11,6 +11,10 @@
 #import <AVFoundation/AVFoundation.h>
 #import <YYCategories/YYCategories.h>
 
+CGFloat visibleHeight = 200;
+CGFloat visibleWidth = 200;
+CGFloat animationDuration = 1.33;
+
 @interface JAScanner ()
 
 @property (nonatomic,strong) UIView *view;
@@ -105,7 +109,7 @@
     }else {
         if ([UIView areAnimationsEnabled]) {
             self.containView.scanningImageView.bottom = self.visibleArea.origin.y;
-            [UIView animateWithDuration:1.33 animations:^{
+            [UIView animateWithDuration:animateWithDuration animations:^{
                 [UIView setAnimationRepeatCount:MAXFLOAT];
                 self.containView.scanningImageView.bottom = self.visibleArea.origin.y + self.visibleArea.size.height;
                 self.containView.scanningImageView.alpha = 0.0;

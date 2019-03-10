@@ -9,8 +9,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-CGFloat visibleHeight = 200;
-CGFloat visibleWidth = 200;
+FOUNDATION_EXPORT CGFloat visibleHeight;
+FOUNDATION_EXPORT CGFloat visibleWidth;
+FOUNDATION_EXPORT CGFloat animationDuration;
+
+@class JAScanView;
 
 typedef NS_ENUM(NSInteger,JAScannerState) {
     JAScannerStateNone,
@@ -28,6 +31,8 @@ typedef NS_ENUM(NSInteger,JAScannerOption) {
 @property (nonatomic,strong) UIImage *areaImage;
 @property (nonatomic,strong) UIImage *scanningImage;
 @property (nonatomic,copy) void (^animateBlock)(void);
+/** Custom add some view */
+@property (nonatomic,strong,readonly) JAScanView *containView;
 
 /** flashlight status */
 @property (nonatomic,assign,getter=isBulb) BOOL bulb;
