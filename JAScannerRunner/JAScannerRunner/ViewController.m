@@ -19,10 +19,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.scanner = [JAScanner scanAtView:self.view];
-    [self.scanner startWithCompletionHandler:^(NSString * _Nonnull result) {
+    JAScanner *scanner = [JAScanner scanAtView:self.view];
+    [scanner startWithCompletionHandler:^(NSString * _Nonnull result) {
         NSLog(@"%@",result);
-    }];
+    }];    
+    self.scanner = scanner;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

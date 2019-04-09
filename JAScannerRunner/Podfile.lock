@@ -1,12 +1,12 @@
 PODS:
-  - JAScanner (0.0.1):
+  - JAScanner (0.0.1.1):
     - YYCategories
   - YYCategories (1.0.4):
     - YYCategories/no-arc (= 1.0.4)
   - YYCategories/no-arc (1.0.4)
 
 DEPENDENCIES:
-  - JAScanner (from `../JAScanner.podspec`)
+  - JAScanner (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -14,12 +14,12 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   JAScanner:
-    :podspec: "../JAScanner.podspec"
+    :path: "../"
 
 SPEC CHECKSUMS:
-  JAScanner: 292ae716a9a02331733e31c3acc3fe8a655e8223
+  JAScanner: 040d715a6f20d0d3861697eb2be782272f0e960a
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: 2f8f58c72ae2deebdd5e21fb31d503e36e88bae0
+PODFILE CHECKSUM: 3ac53eb084b5304847212bf23e769dcaa25b8b75
 
 COCOAPODS: 1.6.1

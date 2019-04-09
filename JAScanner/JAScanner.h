@@ -38,9 +38,9 @@ typedef NS_ENUM(NSInteger,JAScannerOption) {
 @property (nonatomic,assign,getter=isBulb) BOOL bulb;
 @property (nonatomic,assign,getter=isHideBulb) BOOL hideBulb;
 
-/** Default is qr */
+/** Default option is qr */
 @property (nonatomic,assign) JAScannerOption option;
-/** Default is none */
+/** Default status is none */
 @property (nonatomic,assign) JAScannerState state;
 
 /**
