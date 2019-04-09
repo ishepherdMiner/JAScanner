@@ -31,7 +31,7 @@ typedef NS_ENUM(NSInteger,JAScannerOption) {
 @property (nonatomic,strong) UIImage *areaImage;
 @property (nonatomic,strong) UIImage *scanningImage;
 @property (nonatomic,copy) void (^animateBlock)(void);
-/** Custom add some view */
+/** Custom add some views */
 @property (nonatomic,strong,readonly) JAScanView *containView;
 
 /** flashlight status */
