@@ -1,4 +1,4 @@
-[效果图](https://i.loli.net/2019/04/09/5cac0d7d449ec.png)
+![效果图](https://i.loli.net/2019/04/09/5cac0d7d449ec.png)
 
 ## Installation
 
@@ -16,7 +16,10 @@ pod 'JAScanner'
 ```
 
 ```objc
+// provide an container view
 JAScanner *scanner = [JAScanner scanAtView:self.view];
+
+// start scanning and set a completion block
 [scanner startWithCompletionHandler:^(NSString * _Nonnull result) {
     NSLog(@"%@",result);
 }];    
